@@ -1,0 +1,180 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Happy Birthday my bestfriend ❤</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="adwaitlogo.jpg" type="image/jpg" />
+</head>
+<body>
+
+  <!-- Login Popup -->
+  <div id="login-popup" class="login-popup">
+    <div class="login-popup-content">
+      <h2>Login to Continue</h2>
+      <form id="login-form">
+        <input type="text" id="username" placeholder="Username" autocomplete="off" required />
+        <input type="password" id="password" placeholder=" dd/mm/yyyy" autocomplete="off" required />
+        <button type="submit">Login</button>
+        <p id="login-error" class="login-error"></p>
+      </form>
+    </div>
+  </div>
+  <!-- Countdown Section (Visible before login) -->
+<section id="countdown" class="countdown-section">
+  <div class="container card">
+    <h2 class="section-title">Countdown to Your Day 🎂</h2>
+    <div class="countdown-grid">
+      <div class="time-box"><span id="dd">00</span><small>Days</small></div>
+      <div class="time-box"><span id="hh">00</span><small>Hours</small></div>
+      <div class="time-box"><span id="mm">00</span><small>Minutes</small></div>
+      <div class="time-box"><span id="ss">00</span><small>Seconds</small></div>
+    </div>
+    <p class="tiny">Event starts: <span id="nextBdayLabel"></span></p>
+  </div>
+</section>
+
+
+
+  <!-- Main Content (hidden until login) -->
+  <div id="main-content" style="display:none;">
+
+    <!-- Floating Background Particles -->
+    <div id="particles" class="particles"></div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <div class="hero-content">
+        <h1 class="typewriter" id="typewriter">Happy Birthday,Morime! 💕</h1>
+        <p class="subtitle fade-in">Today is all about celebrating you and the joy you bring to my life</p>
+        <div class="floating-hearts">
+          <div class="heart">💕</div>
+          <div class="heart">❤</div>
+          <div class="heart">💗</div>
+          <div class="heart">💖</div>
+          <div class="heart">💞</div>
+        </div>
+        <button class="cta-button" onclick="scrollToSection('gallery')">Start the Celebration 🎉</button>
+      </div>
+      <div class="scroll-indicator">
+        <div class="scroll-arrow"></div>
+      </div>
+    </section>
+
+    <!-- Photo Gallery Section -->
+     <!--rite-->
+    <section class="gallery-section" id="gallery">
+      <div class="container">
+        <h2 class="section-title">Your Beautiful Memories</h2>
+        <!--rite-->
+        <div class="gallery-grid">
+          <div class="photo-card" data-aos="fade-up" data-delay="100">
+            <div class="photo-container">
+              <img src="WhatsApp Image 2025-08-13 at 3.41.40 PM (1).jpeg" alt="Beautiful moment" />
+              <div class="photo-overlay">
+                <div class="photo-caption">Every moment with you is magical</div>
+                <button class="like-btn" onclick="toggleLike(this)"><span class="heart-icon">🤍</span></button>
+              </div>
+            </div>
+          </div>
+
+           <div class="photo-card" data-aos="fade-up" data-delay="200">
+            <div class="photo-container">
+              <img src=" WhatsApp Image 2025-08-13 at 3.43.50 PM.jpeg " alt="Sweet memory" />
+              <div class="photo-overlay">
+                <div class="photo-caption">Your smile lights up my world</div>
+                <button class="like-btn" onclick="toggleLike(this)"><span class="heart-icon">🤍</span></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="photo-card" data-aos="fade-up" data-delay="400">
+            <div class="photo-container">
+              <img src="WhatsApp Image 2025-08-13 at 3.41.40 PM (3).jpeg " alt="Love moment" />
+              <div class="photo-overlay">
+                <div class="photo-caption">My heart belongs to you</div>
+                <button class="like-btn" onclick="toggleLike(this)"><span class="heart-icon">🤍</span></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="photo-card" data-aos="fade-up" data-delay="500">
+            <div class="photo-container">
+              <img src=" WhatsApp Image 2025-08-13 at 3.41.40 PM.jpeg" alt="Beautiful day" />
+              <div class="photo-overlay">
+                <div class="photo-caption">Creating memories together</div>
+                <button class="like-btn" onclick="toggleLike(this)"><span class="heart-icon">🤍</span></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="photo-card" data-aos="fade-up" data-delay="600">
+            <div class="photo-container">
+              <img src="WhatsApp Image 2025-08-13 at 3.43.50 PM (1).jpeg" alt="Romantic moment" />
+              <div class="photo-overlay">
+                <div class="photo-caption">Forever and always</div>
+                <button class="like-btn" onclick="toggleLike(this)"><span class="heart-icon">🤍</span></button>
+              </div>
+            </div>
+          </div>
+                    <div class="photo-card" data-aos="fade-up" data-delay="500">
+            <div class="photo-container">
+              <img src="WhatsApp Image 2025-08-13 at 3.43.50 PM.jpeg" alt="Beautiful day" />
+              <div class="photo-overlay">
+                <div class="photo-caption">Creating memories together</div>
+                <button class="like-btn" onclick="toggleLike(this)"><span class="heart-icon">🤍</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Birthday Message Section -->
+    <section class="message-section" id="message">
+      <div class="container">
+        <div class="message-card">
+          <h2 class="message-title">A Special Message for You</h2>
+          <div class="message-content">
+            <p class="message-text fade-in-text">
+              On this special day, I want you to know how grateful I am to have you in my life.
+              Your laughter fills my days with joy, your love gives me strength, and your presence makes everything better.
+              You are not just my girlfriend, you are my best friend, my partner in crime, and the love of my life.
+            </p>
+            <p class="message-text fade-in-text">
+              Today, we celebrate you — your kindness, your beauty, your amazing spirit,
+              and all the wonderful things that make you uniquely you. I hope this new year of your life brings you endless happiness,
+              incredible adventures, and all your dreams come true Inshaallah.
+            </p>
+            <p class="message-signature fade-in-text">
+              Happy Birthday, my friend! Here's to many more years of laughter, love, and beautiful memories together. 💕
+            </p>
+            <div class="message-hearts">
+              <span class="heart-animation">💖</span>
+              <span class="heart-animation">💗</span>
+              <span class="heart-animation">❤</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+ 
+
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container box">
+        <p>&copy; 2025 Adwait Made with ❤ for the most amazing person in the world</p>
+      </div>
+    </footer>
+  </div>
+  <!-- FOOTER -->
+  
+
+  <script src="script.js"></script>
+</body>
+</html>
